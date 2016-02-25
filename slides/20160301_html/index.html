@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML Introduction</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML Introduction</h1>
+					<h3>2016/03/01</h3>
+				</section>
+				<section>
+					<section>
+						<h1>Part I:<br>網頁簡介</h1>
+					</section>
+					<section>
+						<h2>網頁</h2>
+						<ul>
+							<li class="fragment">一個檔案</li>
+							<li class="fragment">存放在某臺電腦中</li>
+							<li class="fragment">這台電腦必須連上網路</li>
+							<li class="fragment">透過網址取得這個檔案</li>
+							<li class="fragment">利用瀏覽器解讀內容後呈現</li>
+						</ul>
+					</section>
+					<section>
+						<h2>網頁的內容</h2>
+						<ul>
+							<li class="fragment">文字</li>
+							<li class="fragment">多媒體(圖片、音樂、影片等)</li>
+							<li class="fragment">Applet(在頁面執行的副程式)</li>
+							<li class="fragment">超連結</li>
+						</ul>
+					</section>
+					<section>
+						<h2>網站</h2>
+						<ul>
+							<li class="fragment">許多網頁的集合</li>
+							<li class="fragment">存放在同一區域</li>
+							<li class="fragment">網站的起始頁面稱為首頁</li>
+						</ul>
+					</section>
+					<section>
+						<h2>網頁設計</h2>
+						<p class="fragment">大致分為前端、後端</p>
+						<p class="fragment">前端：UI、UX設計</p>
+						<p class="fragment">後端：程式設計</p>
+						<p class="fragment"><del>全端：22K的產物</del></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part II:<br>寫網頁的工具</h1>
+					</section>
+					<section>
+						<h2>語言</h2>
+						<ul>
+							<li class="fragment">HTML</li>
+							<li class="fragment">CSS</li>
+							<li class="fragment">JavaScript</li>
+							<li class="fragment">SQL</li>
+							<li class="fragment">PHP</li>
+							<li class="fragment">XML</li>
+							<li class="fragment">Python</li>
+							<li class="fragment">Ruby</li>
+						</ul>
+					</section>
+					<section>
+						<h2>HTML</h2>
+						<p class="fragment">Hyper Type <span class="fragment highlight-red">Markup Language</span></p>
+						<p class="fragment">超文件標示語言</p>
+						<p class="fragment">1982年由Timothy John Berners-Lee建立</p>
+						<p class="fragment">由W3C維護</p>
+					</section>
+					<section>
+						<h2>CSS</h2>
+						<p class="fragment">Cascading <span class="fragment highlight-red">Style Sheets</span></p>
+						<p class="fragment">層疊樣式表</p>
+						<p class="fragment">1996年發明</p>
+						<p class="fragment">由W3C維護</p>
+					</section>
+					<section>
+						<h2>JavaScript</h2>
+						<p class="fragment">跟Java一點關係都沒有</p>
+						<p class="fragment">直譯式語言</p>
+						<p class="fragment">操控網頁元素</p>
+					</section>
+					<section>
+						<h2>編輯器</h2>
+						<ul>
+							<li class="fragment">記事本</li>
+							<li class="fragment">Sublime Text</li>
+							<li class="fragment">Notepad++</li>
+							<li class="fragment">任何可以進行<span class="fragment highlight-red">純</span>文字的編輯軟體</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part III:<br>HTML架構</h1>
+					</section>
+					<section>
+						<h2>基本架構</h2>
+						<pre class="fragment"><code data-trim>
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;我是頁面標題&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        內容
+        &lt;!--我是註解--&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>HTML Tag</h2>
+						<p class="fragment">用&lt;和&gt;夾著標籤名</p>
+						<p class="fragment">網頁的基本元素</p>
+						<p class="fragment">分成單標籤和雙標籤</p>
+						<p class="fragment">單標籤&lt;meta&gt;, &lt;br&gt;, ...</p>
+						<p class="fragment">雙標籤&lt;p&gt;&lt;/p&gt;, &lt;title&gt;&lt;/title&gt;, ...</p>
+					</section>
+					<section>
+						<h2>動手做做看</h2>
+						<ol>
+							<li class="fragment">打開編輯軟體</li>
+							<li class="fragment">存檔為"檔名.html"</li>
+							<li class="fragment">寫出HTML的基本架構</li>
+							<li class="fragment">寫一些內容</li>
+							<li class="fragment">再次存檔並用瀏覽器打開</li>
+							<li class="fragment">咦？</li>
+						</ol>
+						<p class="fragment"><a href="demo1.html" target="_blank">Demo</a></p>
+					</section>
+					<section>
+						<h2>&lt;head&gt;&lt;/head&gt;</h2>
+						<p class="fragment">整個頁面的大設定</p>
+						<ul>
+							<li class="fragment">語系</li>
+							<li class="fragment">標題</li>
+							<li class="fragment">資訊</li>
+							<li class="fragment">載入外部檔案</li>
+						</ul>
+					</section>
+					<section>
+						<h2>&lt;title&gt;&lt;/title&gt;</h2>
+						<ul>
+							<li class="fragment">雙標籤</li>
+							<li class="fragment">標題</li>
+							<li class="fragment">視窗或分頁標籤上的名稱</li>
+							<li class="fragment">不會顯示在內容中</li>
+						</ul>
+					</section>
+					<section>
+						<h2>&lt;meta&gt;</h2>
+						<ul>
+							<li class="fragment">單標籤</li>
+							<li class="fragment">設定或標記資訊</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;meta charset="utf-8"&gt;&lt;!--設定文字編碼--&gt;
+&lt;meta name="keywords" content="web"&gt;&lt;!--設定關鍵字--&gt;
+&lt;meta name="author" content="Kei"&gt;&lt;!--設定作者--&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>&lt;link&gt;</h2>
+						<ul>
+							<li class="fragment">單標籤</li>
+							<li class="fragment">載入外部檔案</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;link rel="stylesheet" href="css/general.css"&gt;&lt;!--載入樣式檔--&gt;
+&lt;link rel="icon" href="img/icon.ico" type="image/x-icon"&gt;&lt;!--icon圖檔--&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>動手做做看</h2>
+						<ol>
+							<li class="fragment">打開剛剛的網頁</li>
+							<li class="fragment">在&lt;head&gt;&lt;/head&gt;中加上meta設定</li>
+							<li class="fragment">存檔並用瀏覽器打開</li>
+						</ol>
+						<p class="fragment"><a href="demo2.html" target="_blank">Demo</a></p>
+					</section>
+					<section>
+						<h2>&lt;body&gt;&lt;/body&gt;</h2>
+						<p class="fragment">所有內容都寫在這邊</p>
+						<p class="fragment">HTML5提供簡單架構標籤</p>
+						<ul>
+							<li class="fragment">&lt;header&gt;&lt;/header&gt; 頁首</li>
+							<li class="fragment">&lt;nav&gt;&lt;/nav&gt; 導覽列</li>
+							<li class="fragment">&lt;main&gt;&lt;/main&gt; 內容</li>
+							<li class="fragment">&lt;footer&gt;&lt;/footer&gt; 頁尾</li>
+						</ul>
+					</section>
+					<section>
+						<h2>動手做做看</h2>
+						<ol>
+							<li class="fragment">打開剛剛的網頁</li>
+							<li class="fragment">在&lt;body&gt;&lt;/body&gt;中加上HTML5結構標籤</li>
+							<li class="fragment">存檔並用瀏覽器打開</li>
+						</ol>
+						<p class="fragment"><a href="demo3.html" target="_blank">Demo</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part IV:<br>常用HTML標籤</h1>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
