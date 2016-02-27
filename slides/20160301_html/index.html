@@ -74,9 +74,11 @@
 					<section>
 						<h2>網頁設計</h2>
 						<p class="fragment">大致分為前端、後端</p>
-						<p class="fragment">前端：UI、UX設計</p>
-						<p class="fragment">後端：程式設計</p>
-						<p class="fragment"><del>全端：22K的產物</del></p>
+						<ul>
+							<li class="fragment">前端：UI、UX設計</li>
+							<li class="fragment">後端：程式設計</li>
+							<li class="fragment"><del>全端：22K的產物</del></li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -166,17 +168,36 @@
 						<p class="fragment"><a href="demo1.html" target="_blank">Demo</a></p>
 					</section>
 					<section>
-						<h2>&lt;head&gt;&lt;/head&gt;</h2>
+						<h2>檔頭</h2>
+						<pre class="fragment"><code data-trim>
+&lt;head&gt;
+	&lt;!--寫在這裡--&gt;
+&lt;/head&gt;
+						</code></pre>
 						<p class="fragment">整個頁面的大設定</p>
 						<ul>
-							<li class="fragment">語系</li>
+							<li class="fragment">文字編碼</li>
 							<li class="fragment">標題</li>
 							<li class="fragment">資訊</li>
 							<li class="fragment">載入外部檔案</li>
 						</ul>
 					</section>
 					<section>
-						<h2>&lt;title&gt;&lt;/title&gt;</h2>
+						<h2>文字編碼</h2>
+						<pre class="fragment"><code data-trim>
+&lt;meta charset="utf-8" &gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">各語言都有自己的編碼</li>
+							<li class="fragment">錯的編碼解讀就會出現亂碼</li>
+							<li class="fragment">萬國碼可適用大多數語言</li>
+						</ul>
+					</section>
+					<section>
+						<h2>視窗標題</h2>
+						<pre class="fragment"><code data-trim>
+&lt;title&gt;視窗標題&lt;/title&gt;
+						</code></pre>
 						<ul>
 							<li class="fragment">雙標籤</li>
 							<li class="fragment">標題</li>
@@ -185,57 +206,38 @@
 						</ul>
 					</section>
 					<section>
-						<h2>&lt;meta&gt;</h2>
-						<ul>
-							<li class="fragment">單標籤</li>
-							<li class="fragment">設定或標記資訊</li>
-						</ul>
+						<h2>網頁內容</h2>
 						<pre class="fragment"><code data-trim>
-&lt;meta charset="utf-8"&gt;&lt;!--設定文字編碼--&gt;
-&lt;meta name="keywords" content="web"&gt;&lt;!--設定關鍵字--&gt;
-&lt;meta name="author" content="Kei"&gt;&lt;!--設定作者--&gt;
+&lt;body&gt;
+	&lt;!--寫在這裡--&gt;
+&lt;/body&gt;
 						</code></pre>
-					</section>
-					<section>
-						<h2>&lt;link&gt;</h2>
-						<ul>
-							<li class="fragment">單標籤</li>
-							<li class="fragment">載入外部檔案</li>
-						</ul>
-						<pre class="fragment"><code data-trim>
-&lt;link rel="stylesheet" href="css/general.css"&gt;&lt;!--載入樣式檔--&gt;
-&lt;link rel="icon" href="img/icon.ico" type="image/x-icon"&gt;&lt;!--icon圖檔--&gt;
-						</code></pre>
-					</section>
-					<section>
-						<h2>動手做做看</h2>
-						<ol>
-							<li class="fragment">打開剛剛的網頁</li>
-							<li class="fragment">在&lt;head&gt;&lt;/head&gt;中加上meta設定</li>
-							<li class="fragment">存檔並用瀏覽器打開</li>
-						</ol>
-						<p class="fragment"><a href="demo2.html" target="_blank">Demo</a></p>
-					</section>
-					<section>
-						<h2>&lt;body&gt;&lt;/body&gt;</h2>
 						<p class="fragment">所有內容都寫在這邊</p>
-						<p class="fragment">HTML5提供簡單架構標籤</p>
-						<ul>
-							<li class="fragment">&lt;header&gt;&lt;/header&gt; 頁首</li>
-							<li class="fragment">&lt;nav&gt;&lt;/nav&gt; 導覽列</li>
-							<li class="fragment">&lt;main&gt;&lt;/main&gt; 內容</li>
-							<li class="fragment">&lt;section&gt;&lt;/section&gt; 章節</li>
-							<li class="fragment">&lt;footer&gt;&lt;/footer&gt; 頁尾</li>
-						</ul>
+						<p class="fragment">HTML5架構標籤</p>
+						<pre class="fragment"><code data-trim>
+&lt;body&gt;
+	&lt;header&gt;頁首
+		&lt;nav&gt;導覽列&lt;/nav&gt;
+	&lt;/header&gt;
+	&lt;main&gt;
+		內容，可分為若干個章節
+		&lt;section&gt;章節&lt;/section&gt;
+		&lt;section&gt;章節&lt;/section&gt;
+		&lt;section&gt;章節&lt;/section&gt;
+	&lt;/main&gt;
+	&lt;footer&gt;頁尾&lt;/footer&gt;
+&lt;/body&gt;
+						</code></pre>
 					</section>
 					<section>
 						<h2>動手做做看</h2>
 						<ol>
 							<li class="fragment">打開剛剛的網頁</li>
+							<li class="fragment">在&lt;head&gt;&lt;/head&gt;中加上編碼設定</li>
 							<li class="fragment">在&lt;body&gt;&lt;/body&gt;中加上HTML5結構標籤</li>
 							<li class="fragment">存檔並用瀏覽器打開</li>
 						</ol>
-						<p class="fragment"><a href="demo3.html" target="_blank">Demo</a></p>
+						<p class="fragment"><a href="demo2.html" target="_blank">Demo</a></p>
 					</section>
 				</section>
 				<section>
@@ -244,8 +246,15 @@
 					</section>
 					<section>
 						<h2>標題</h2>
+						<pre class="fragment"><code data-trim>
+&lt;h1&gt;最大&lt;/h1&gt;
+&lt;h6&gt;次大&lt;/h2&gt;
+&lt;h1&gt;第三大&lt;/h3&gt;
+&lt;h6&gt;第三小&lt;/h4&gt;
+&lt;h1&gt;次小&lt;/h5&gt;
+&lt;h6&gt;最小&lt;/h6&gt;
+						</code></pre>
 						<ul>
-							<li class="fragment"><span style="font-size: 3em;">&lt;h1&gt;&lt;/h1&gt;</span>~<span style="font-size: 1.2em;">&lt;h6&gt;&lt;/h6&gt;</span></li>
 							<li class="fragment">雙標籤</li>
 							<li class="fragment">由大到小</li>
 							<li class="fragment">不要拿來設定字的大小</li>
@@ -253,8 +262,12 @@
 					</section>
 					<section>
 						<h2>段落</h2>
+						<pre class="fragment"><code data-trim>
+&lt;p&gt;
+	段落內文
+&lt;/p&gt;
+						</code></pre>
 						<ul>
-							<li class="fragment">&lt;p&gt;&lt;/p&gt;</li>
 							<li class="fragment">雙標籤</li>
 							<li class="fragment">結束自動空一行(瀏覽器預設)</li>
 							<li class="fragment">不要拿來換行</li>
@@ -262,16 +275,28 @@
 					</section>
 					<section>
 						<h2>換行</h2>
+						<pre class="fragment"><code data-trim>
+第一行&lt;br&gt;第二行
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+第一行<br>第二行
+						</samp></pre>
 						<ul>
-							<li class="fragment">&lt;br&gt;</li>
 							<li class="fragment">單標籤</li>
 							<li class="fragment">不要拿來排版</li>
 						</ul>
 					</section>
 					<section>
 						<h2>分隔線</h2>
+						<pre class="fragment"><code data-trim>
+第一行
+&lt;hr&gt;
+第二行
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+第一行<hr>第二行
+						</samp></pre>
 						<ul>
-							<li class="fragment">&lt;hr&gt;</li>
 							<li class="fragment">單標籤</li>
 							<li class="fragment">HTML5 + CSS3 的時代來臨，逐漸被遺忘</li>
 						</ul>
@@ -283,8 +308,139 @@
 							<li class="fragment">用剛剛學到的標籤幫內文做一些簡單的編排</li>
 							<li class="fragment">存檔並用瀏覽器打開</li>
 						</ol>
+						<p class="fragment"><a href="demo3.html" target="_blank">Demo</a></p>
+					</section>
+					<section>
+						<h2>試試這個</h2>
+						<pre class="fragment"><code data-trim>
+&lt;p&gt;我 &nbsp;&nbsp;&nbsp;要 &nbsp;&nbsp;&nbsp;空 &nbsp;&nbsp;&nbsp;很 &nbsp;&nbsp;&nbsp;多 &nbsp;&nbsp;&nbsp;格&lt;/p&gt;
+						</code></pre>
+						<p class="fragment">出來的結果應該是怎樣呢?</p>
+						<pre class="fragment"><samp data-trim>
+<p>我 要 空 很 多 格</p>
+						</samp></pre>
+					</section>
+					<section>
+						<h2>特殊字元</h2>
+						<p>設計來顯示保留字元</p>
+						<table class="fragment">
+							<tr>
+								<th>字元</th>
+								<th>代號</th>
+							</tr>
+							<tr>
+								<td>空白</td>
+								<td>&amp;nbsp;</td>
+							</tr>
+							<tr>
+								<td>&lt;</td>
+								<td>&amp;lt;</td>
+							</tr>
+							<tr>
+								<td>&gt;</td>
+								<td>&amp;gt;</td>
+							</tr>
+							<tr>
+								<td>&</td>
+								<td>&amp;amp;</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>強調標籤</h2>
+						<ul>
+							<li class="fragment">雙標籤</li>
+							<li class="fragment">可同時使用多組</li>
+							<li class="fragment">需一層包夾一層</li>
+							<li class="fragment">可以以CSS取代</li>
+						</ul>
+					</section>
+					<section>
+						<h2>強調標籤</h2>
+						<table class="fragment">
+							<tr>
+								<th>效果</th>
+								<th>標籤</th>
+							</tr>
+							<tr>
+								<td>粗體</td>
+								<td>&lt;strong&gt;&lt;/strong&gt;</td>
+							</tr>
+							<tr>
+								<td>斜體</td>
+								<td>&lt;em&gt;&lt;/em&gt;</td>
+							</tr>
+							<tr>
+								<td>底線</td>
+								<td>&lt;u&gt;&lt;/u&gt;</td>
+							</tr>
+							<tr>
+								<td>刪除線</td>
+								<td>&lt;del&gt;&lt;/del&gt;</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>動手做做看</h2>
+						<p class="fragment">試著做出這個效果</p>
+						<pre class="fragment"><samp data-trim>
+我是一般字<br>
+<strong>我是粗體</strong><br>
+<em>我是斜體</em><br>
+<u>我是底線</u><br>
+<del>我是刪除線</del><br>
+<strong><em><u><del>我要粗體+斜體+底線+刪除線</del></u></em></strong>
+						</samp></pre>
 						<p class="fragment"><a href="demo4.html" target="_blank">Demo</a></p>
 					</section>
+					<section>
+						<h2>清單</h2>
+						<pre class="fragment"><code data-trim>
+&lt;ul&gt;
+	&lt;li&gt;項目&lt;/li&gt;
+	&lt;li&gt;項目&lt;/li&gt;
+&lt;/ul&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">用於條列式</li>
+							<li class="fragment">清單標籤&lt;ul&gt;&lt;/ul&gt;包夾項目標籤&lt;li&gt;&lt;/li&gt;</li>
+							<li class="fragment">分成有編號&lt;ol&gt;&lt;/ol&gt;和無編號&lt;ul&gt;&lt;/ul&gt;</li>
+							<li class="fragment">清單中可以再有清單</li>
+						</ul>
+						<p class="fragment"><a href="demo5.html" target="_blank">Demo</a></p>
+					</section>
+					<section>
+						<h2>表格</h2>
+						<pre class="fragment"><code data-trim>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;標題&lt;/th&gt;
+		&lt;th&gt;標題&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;內容&lt;/td&gt;
+		&lt;td&gt;內容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">tr表示列</li>
+							<li class="fragment">td表示欄</li>
+							<li class="fragment">展示大量有規則的資料</li>
+							<li class="fragment">不要用來排版</li>
+						</ul>
+						<p class="fragment"><a href="demo6.html" target="_blank">Demo</a></p>
+					</section>
+				</section>
+				<section>
+					<h1>What's Next?</h1>
+					<ul>
+						<li class="fragment">Attribute</li>
+						<li class="fragment">Meta & Link</li>
+						<li class="fragment">Hyperlink</li>
+						<li class="fragment">HTML5 Tag</li>
+						<li class="fragment">Multimedia</li>
+					</ul>
 				</section>
 			</div>
 		</div>
