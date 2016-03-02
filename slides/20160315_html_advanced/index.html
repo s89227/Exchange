@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML Advanced</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML Advanced</h1>
+					<h3>2016/03/15</h3>
+				</section>
+				<section>
+					<section>
+						<h1>Part I:<br>HTML5 Tags</h1>
+					</section>
+					<section>
+						<h2>HTML5</h2>
+						<img src="HTML5.png">
+					</section>
+					<section>
+						<h2>HTML5</h2>
+						<ul>
+							<li class="fragment">2014年完成</li>
+							<li class="fragment">新標準</li>
+							<li class="fragment">不設定樣式</li>
+							<li class="fragment">增加標籤</li>
+							<li class="fragment">增加元素、屬性</li>
+							<li class="fragment">提供<a href="http://www.effectgames.com/demos/canvascycle/" target="_blank">canvas</a>等功能</li>
+							<li class="fragment">注意瀏覽器支援程度</li>
+						</ul>
+					</section>
+					<section>
+						<h2>語意標籤</h2>
+						<ul>
+							<li class="fragment">透過HTML標籤了解內容</li>
+							<li class="fragment">方便CSS排版</li>
+							<li class="fragment">協助機械閱讀(搜尋引擎)</li>
+						</ul>
+						<p class="fragment"><a href="../20160301_html_introduction/demo2.html">Demo</a></p>
+					</section>
+					<section>
+						<h2>HTML5新標籤</h2>
+						<ul>
+							<li class="fragment">details & summary</li>
+							<li class="fragment">dialog</li>
+							<li class="fragment">mark</li>
+							<li class="fragment">menu & menuitem</li>
+							<li class="fragment">meter</li>
+							<li class="fragment">多媒體標籤</li>
+							<li class="fragment"><a href="http://www.w3schools.com/html/html5_new_elements.asp" target="_blank">其他</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>details & summary</h2>
+						<ul>
+							<li class="fragment">產生摺疊內容</li>
+							<li class="fragment">summary表示摘要</li>
+							<li class="fragment">Firefox與IE不支援</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;details&gt;
+	&lt;summary&gt;摘要&lt;/summary&gt;
+	其他內容
+&lt;/details&gt;
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<details>
+	<summary>摘要</summary>
+	其他內容
+</details>
+						</samp></pre>
+					</section>
+					<section>
+						<h2>dialog</h2>
+						<ul>
+							<li class="fragment">顯示對話視窗</li>
+							<li class="fragment">搭配JS使用</li>
+							<li class="fragment">Firefox與IE不支援</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;dialog open&gt;這是個對話窗&lt;/dialog&gt;
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<dialog open>這是個對話窗</dialog>
+						</samp></pre>
+					</section>
+					<section>
+						<h2>mark</h2>
+						<ul>
+							<li class="fragment">強調文字</li>
+							<li class="fragment">預設黃底黑字</li>
+							<li class="fragment">IE9以下不支援</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;mark&gt;這邊&lt;/mark&gt;我用mark標起來
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<mark>這邊</mark>我用mark標起來
+						</samp></pre>
+					</section>
+					<section>
+						<h2>menu & menuitem</h2>
+						<ul>
+							<li class="fragment">設定右鍵點開的選單</li>
+							<li class="fragment">搭配JS使用</li>
+							<li class="fragment">只有Firefox 8.0以上支援</li>
+						</ul>
+						<div><img src="menu.png" class="fragment"></div>
+					</section>
+					<section>
+						<h2>meter</h2>
+						<ul>
+							<li class="fragment">顯示進度</li>
+							<li class="fragment">類似progress標籤</li>
+							<li class="fragment">IE不支援</li>
+						</ul>
+						<pre class="fragment"><code data-trim>
+&lt;progress value="22" max="100"&gt;&lt;/progress&gt;
+&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;&lt;br&gt;
+&lt;meter value="0.6"&gt;60%&lt;/meter&gt;
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<progress value="22" max="100"></progress>
+<meter value="2" min="0" max="10">2 out of 10</meter><br>
+<meter value="0.6">60%</meter>
+						</samp></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part II:<br>Attribute</h1>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part III:<br>Hyperlinks</h1>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part IV:<br>Meta & Link Tags</h1>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Part V:<br>Multimedia</h1>
+					</section>
+				</section>
+				<section>
+					<h1>What's Next?</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
