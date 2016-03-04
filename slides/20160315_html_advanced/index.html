@@ -161,10 +161,110 @@
 					<section>
 						<h1>Part II:<br>Attribute</h1>
 					</section>
+					<section>
+						<h2>Attribute</h2>
+						<pre class="fragment"><code data-trim>
+&lt;tagname attributename="value"&gt;&lt;/tagname&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meter value="2" min="0" max="10"&gt;2 out of 10&lt;/meter&gt;
+
+&lt;tagname attributename&gt;&lt;/tagname&gt;
+&lt;input type="checkbox" name="vehicle" value="Car" checked&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">設定該元素額外屬性</li>
+							<li class="fragment">可以有多個屬性</li>
+							<li class="fragment">搭配JS控制</li>
+						</ul>
+					</section>
+					<section>
+						<h2>常用屬性</h2>
+						<ul>
+							<li class="fragment">id 設定該元素的唯一名稱</li>
+							<li class="fragment">class 類似id，但可以給多個元素使用</li>
+							<li class="fragment">style 設定CSS樣式</li>
+							<li class="fragment">hidden 隱藏元素</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Part III:<br>Hyperlinks</h1>
+					</section>
+					<section>
+						<h2>超連結</h2>
+						<pre class="fragment"><code data-trim>
+&lt;a href="http://s89227.github.io/Exchange/"&gt;超連結&lt;/a&gt;
+&lt;a href="../../index.html"&gt;這也是超連結&lt;/a&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">a表示超連結</li>
+							<li class="fragment">href為連結目標</li>
+							<li class="fragment">使用網址或相對路徑</li>
+						</ul>
+					</section>
+					<section>
+						<h2>路徑</h2>
+						<ul>
+							<li class="fragment">絕對路徑：第一排第二個</li>
+							<li class="fragment">相對路徑：我的右邊的前面</li>
+							<li class="fragment">外部網站使用絕對路徑(網址)</li>
+							<li class="fragment">內部網頁使用相對路徑</li>
+						</ul>
+					</section>
+					<section>
+						<h2>相對路徑</h2>
+						<div class="fragment"><img src="path.png"></div>
+						<ul>
+							<li class="fragment">./ 同層(可省略)</li>
+							<li class="fragment">../ 上一層</li>
+							<li class="fragment">資料夾名稱/ 該資料夾下層</li>
+						</ul>
+					</section>
+					<section>
+						<h2>target屬性</h2>
+						<pre class="fragment"><code data-trim>
+&lt;a href="../../index.html" target="_blank"&gt;超連結&lt;/a&gt;
+						</code></pre>
+						<p class="fragment">設定開啟連結的方式</p>
+						<table class="fragment">
+							<tr>
+								<th>value</th>
+								<th>效果</th>
+							</tr>
+							<tr>
+								<td>_blank</td>
+								<td>在新分頁或視窗開啟</td>
+							</tr>
+							<tr>
+								<td>_self</td>
+								<td>在這個頁面開啟(預設)</td>
+							</tr>
+							<tr>
+								<td>_parent</td>
+								<td>在母頁面開啟</td>
+							</tr>
+							<tr>
+								<td>_top</td>
+								<td>在這整個頁面開啟</td>
+							</tr>
+							<tr>
+								<td>framename</td>
+								<td>在指定的頁框開啟</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h2>download屬性</h2>
+						<pre class="fragment"><code data-trim>
+&lt;a href="../../index.html" download&gt;超連結&lt;/a&gt;
+&lt;a href="../../index.html" download="home.html"&gt;超連結&lt;/a&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">設定download可下載連結目標</li>
+							<li class="fragment">可給值時預設下載的檔名</li>
+						</ul>
+						<p class="fragment"><a href="demo1.html" target="_blank">Demo</a></p>
 					</section>
 				</section>
 				<section>
