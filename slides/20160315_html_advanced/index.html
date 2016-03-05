@@ -263,18 +263,71 @@
 						<ul>
 							<li class="fragment">設定download可下載連結目標</li>
 							<li class="fragment">可給值時預設下載的檔名</li>
+							<li class="fragment">IE不支援</li>
 						</ul>
 						<p class="fragment"><a href="demo1.html" target="_blank">Demo</a></p>
+					</section>
+					<section>
+						<h2>錨點</h2>
+						<pre class="fragment"><code data-trim>
+&lt;h1 id="a1"&gt;Title&lt;/h1&gt;
+...
+&lt;a href="#a1"&gt;跳回標題&lt;/a&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">目標id前加上#</li>
+							<li class="fragment">跳到指定的元素位置</li>
+							<li class="fragment">可用在不同網頁(url#id)</li>
+						</ul>
+						<p class="fragment"><a href="demo2.html" target="_bland">Demo</a></p>
+						<p class="fragment"><a href="demo2.html#jump" target="_blank">Demo</a></p>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Part IV:<br>Meta & Link Tags</h1>
 					</section>
+					<section>
+						<h2>meta</h2>
+						<pre class="fragment"><code data-trim>
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="description" content="How to Make a Website"&gt;
+	&lt;meta name="keywords" content="HTML,CSS"&gt;
+	&lt;meta name="author" content="Helen Liao"&gt;
+&lt;/head&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">設定檔案資訊</li>
+							<li class="fragment">charset設定編碼</li>
+							<li class="fragment">name設定meta資訊</li>
+							<li class="fragment"><a href="http://www.w3schools.com/tags/tag_meta.asp" target="_blank">其他</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>link</h2>
+						<pre class="fragment"><code data-trim>
+&lt;head&gt;
+	&lt;link rel="stylesheet" type="text/css" href="general.css"&gt;
+	&lt;link rel="icon" type="image/x-icon" href="images/icon.ico"&gt;
+	&lt;link rel="shortcut icon" type="image/x-icon" href="images/icon.ico"&gt;
+&lt;/head&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">載入外部檔案</li>
+							<li class="fragment">設定icon</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
 						<h1>Part V:<br>Multimedia</h1>
+					</section>
+					<section>
+						<h2>圖片</h2>
+						<pre class="fragment"><code data-trim>
+&lt;img src="pic.jpg" alt="A Image" width="304" height="228"&gt;
+						</code></pre>
 					</section>
 				</section>
 				<section>
