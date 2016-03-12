@@ -332,25 +332,97 @@
 						<pre class="fragment"><code data-trim>
 &lt;img src="pic.jpg" alt="A Image" width="304" height="228"&gt;
 						</code></pre>
+						<ul>
+							<li class="fragment">單標籤</li>
+							<li class="fragment">src設定路徑</li>
+							<li class="fragment">alt設定替代文字</li>
+							<li class="fragment">width, height設定寬高</li>
+							<li class="fragment">只設定一個會依比例縮放</li>
+							<li class="fragment">可用CSS代替</li>
+						</ul>
 					</section>
 					<section>
 						<h2>插圖</h2>
+						<pre class="fragment"><code data-trim>
+&lt;figure&gt;
+	&lt;img src="pic.png" alt="Picture"&gt;
+	&lt;figcaption&gt;Fig1. - A Picture&lt;/figcaption&gt;
+&lt;/figure&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">figure表示一組插圖</li>
+							<li class="fragment">img設定圖片</li>
+							<li class="fragment">figcaption設定圖片敘述</li>
+						</ul>
 					</section>
 					<section>
 						<h2>音訊</h2>
+						<pre class="fragment"><code data-trim>
+&lt;audio src="music.mp3" controls autoplay loop&gt;Not Support!&lt;/audio&gt;
+
+&lt;audio controls&gt;
+	&lt;source src="Wildlife1.mp4"&gt;
+&lt;/audio&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">可接受格式：mp3, wav, ogg</li>
+							<li class="fragment">src或source標籤設定音檔路徑</li>
+							<li class="fragment">controls設定顯示控制面板</li>
+							<li class="fragment">autoplay設定自動撥放</li>
+							<li class="fragment">loop設定自動重複撥放</li>
+							<li class="fragment">muted設定靜音</li>
+							<li class="fragment">標籤內文字設定不支援時顯示文字</li>
+						</ul>
 					</section>
 					<section>
 						<h2>視訊</h2>
+						<pre class="fragment"><code data-trim>
+&lt;video src="video.mp4" controls muted poster="pic.png"&gt;&lt;/video&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">用法語audio類似</li>
+							<li class="fragment">可接受格式：mp4, webm, ogg</li>
+							<li class="fragment">poster設定非播放時的縮圖</li>
+						</ul>
 					</section>
 					<section>
 						<h2>複數來源</h2>
+						<pre class="fragment"><code data-trim>
+&lt;video controls poster="pic.png"&gt;
+	&lt;source src="source1.mp4"&gt;
+	&lt;source src="source2.mp4"&gt;
+	&lt;source src="source3.mp4"&gt;
+	Not Support!
+&lt;/video&gt;
+						</code></pre>
+						<ul>
+							<li class="fragment">source標籤設定複數來源</li>
+							<li class="fragment">src設定檔案路徑</li>
+							<li class="fragment">適用audio及video</li>
+							<li class="fragment">無法撥放時，瀏覽器依序切換來源</li>
+						</ul>
 					</section>
 				</section>
 				<section>
-					<h2>Homework</h2>
+					<h2>It's Your Turn!</h2>
+					<ol>
+						<li class="fragment">設定一個主題</li>
+						<li class="fragment">規劃<span class="fragment highlight-red">網站</span>內容</li>
+						<li class="fragment">加入頁首、導覽列、頁尾</li>
+						<li class="fragment">加入文字</li>
+						<li class="fragment">加入多媒體</li>
+						<li class="fragment">設定超連結</li>
+					</ol>
 				</section>
 				<section>
 					<h1>What's Next?</h1>
+					<ul>
+						<li class="fragment">CSS Introduction</li>
+						<li class="fragment">block and inline</li>
+						<li class="fragment">div tag and span tag</li>
+						<li class="fragment">unit of length</li>
+						<li class="fragment">basic CSS style</li>
+					</ul>
 				</section>
 			</div>
 		</div>
