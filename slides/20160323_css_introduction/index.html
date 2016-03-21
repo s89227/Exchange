@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CSS Introduction</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/blood.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>CSS Introduction</h1>
+					<h3>2016/03/23</h3>
+				</section>
+				<section>
+					<section>
+						<h1>CSS Introduction</h1>
+					</section>
+					<section>
+						<h2>CSS</h2>
+						<ul>
+							<li class="fragment">Cascading Style Sheets</li>
+							<li class="fragment">層疊樣式表</li>
+							<li class="fragment">1996年發明</li>
+							<li class="fragment">由W3C維護</li>
+							<li class="fragment">設定樣式、版面配置</li>
+							<li class="fragment"><a href="rei.idv.tw/sample/mio.html" target="_blank">canvas畫圖</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS3</h2>
+						<img src="CSS3.png">
+					</section>
+					<section>
+						<h2>CSS3</h2>
+						<ul>
+							<li class="fragment">CSS最新標準</li>
+							<li class="fragment">取代HTML的樣式設定</li>
+							<li class="fragment">仍有大量功能尚未實作</li>
+							<li class="fragment">注意瀏覽器支援度</li>
+						</ul>
+					</section>
+					<section>
+						<h2>基本語法</h2>
+						<pre class="fragment"><code data-trim>
+&lt;p style="color: green;"&gt;這是一個p標籤&lt;/p&gt;
+&lt;p style="color: green; font-size: 2em;"這是一個p標籤&lt;/p&gt;
+&lt;img src="CSS3.png" style="border-radius: 15px 25px 35px 45px;"&gt;
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<p style="color: green;">這是一個p標籤</p>
+<p style="color: green; font-size: 1.5em;">這是一個p標籤</p>
+<img src="CSS3.png" style="border-radius: 15px 25px 35px 45px;" height="70px">
+						</samp></pre>
+						<ul>
+							<li class="fragment">使用style屬性</li>
+							<li class="fragment">多個屬性用;區隔</li>
+							<li class="fragment">多個值用 區隔</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS使用方式</h2>
+						<ul>
+							<li class="fragment">
+								行內樣式(寫在HTML標籤中)
+								<pre><code data-trim>
+&lt;p style="color: green;"&gt;這是一個p標籤&lt;/p&gt;
+								</code></pre>
+							</li>
+							<li class="fragment">
+								內部樣式(寫在head中搭配selector)
+								<pre><code data-trim>
+&lt;head&gt;
+	&lt;style&gt;
+		p{
+			color: green;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;這是一個p標籤&lt;/p&gt;
+&lt;/body&gt;
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>CSS使用方式</h2>
+						<ul>
+							<li class="fragment">
+								外部樣式(寫在.css檔中搭配selector)
+								<pre><code data-trim>
+&lt;head&gt;
+	&le;link rel="stylesheet" type="text/css" href="setting.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;p&gt;這是一個p標籤&lt;/p&gt;
+&lt;/body&gt;
+								</code></pre>
+								<pre><code data-trim>
+p{
+	color: green;
+}
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Basic CSS Style</h1>
+					</section>
+					<section>
+						<h2>Basic CSS Style</h2>
+						<ul>
+							<li class="fragment">背景</li>
+							<li class="fragment">文字</li>
+							<li class="fragment">字體</li>
+						</ul>
+					</section>
+					<section>
+						<h2>背景</h2>
+						<pre class="fragment"><code data-trim>
+background: #ffffff url("sky.png") no-repeat right top;
+background-color: #ffffff;
+background-image: url(sky.png);
+background-repeat: repeat;
+						</code></pre>
+					</section>
+					<section>
+						<h2>background-color</h2>
+						<pre class="fragment"><code data-trim>
+background-color: red;
+background-color: #fff;
+background-color: #ffffff;
+background-color: rgb(255,255,255);
+background-color: rgba(255,255,255,0.5);
+						</code></pre>
+						<ul>
+							<li class="fragment">背景顏色</li>
+							<li class="fragment">色名</li>
+							<li class="fragment">16進位色碼</li>
+							<li class="fragment">rgb函式</li>
+							<li class="fragment">rgba函式</li>
+						</ul>
+					</section>
+					<section>
+						<h2>background-image</h2>
+						<pre class="fragment"><code data-trim>
+background-image: url('路徑');
+background-image: url("路徑");
+						</code></pre>
+						<ul>
+							<li class="fragment">背景圖片</li>
+							<li class="fragment">單、雙引號都可以</li>
+						</ul>
+					</section>
+					<section>
+						<h2>background-repeat</h2>
+						<pre class="fragment"><code data-trim>
+background-repeat: repeat|repeat-x|repeat-y|no-repeat;
+						</code></pre>
+						<ul>
+							<li class="fragment">背景重複方式</li>
+							<li class="fragment">全部重複</li>
+							<li class="fragment">只在水平方向重複</li>
+							<li class="fragment">只在垂直方向重複</li>
+							<li class="fragment">不重複</li>
+						</ul>
+					</section>
+					<section>
+						<h2>background</h2>
+						<pre class="fragment"><code data-trim>
+background: #ffffff url("sky.png") no-repeat right top;
+						</code></pre>
+						<ul>
+							<li class="fragment">一行設定全部的背景CSS</li>
+							<li class="fragment">可以省略沒有要設定的部分</li>
+						</ul>
+					</section>
+					<section>
+						<h2>文字</h2>
+						<pre class="fragment"><code data-trim>
+color: #ffffff;
+text-align: center;
+text-decoration: none;
+text-shadow: 2px 3px gold;
+						</code></pre>
+					</section>
+					<section>
+						<h2>color</h2>
+						<pre class="fragment"><code data-trim>
+color: red;
+color: #fff;
+color: #ffffff;
+color: rgb(255,255,255);
+color: rgba(255,255,255,0.5);
+						</code></pre>
+						<ul>
+							<li class="fragment">文字顏色</li>
+							<li class="fragment">色名</li>
+							<li class="fragment">16進位色碼</li>
+							<li class="fragment">rgb函式</li>
+							<li class="fragment">rgba函式</li>
+						</ul>
+					</section>
+					<section>
+						<h2>text-align</h2>
+						<pre class="fragment"><code data-trim>
+text-align: left;
+text-align: center;
+text-align: right;
+text-align: justify;
+						</code></pre>
+						<ul>
+							<li class="fragment">文字對齊</li>
+							<li class="fragment">靠左對齊</li>
+							<li class="fragment">置中</li>
+							<li class="fragment">靠右對齊</li>
+							<li class="fragment">左右對齊</li>
+						</ul>
+					</section>
+					<section>
+						<h2>text-decoration</h2>
+						<pre class="fragment"><code data-trim>
+text-decoration: none|underline|line-through|overline;
+						</code></pre>
+						<ul>
+							<li class="fragment">文字裝飾線</li>
+							<li class="fragment">無裝飾線</li>
+							<li class="fragment">底線</li>
+							<li class="fragment">刪除線</li>
+							<li class="fragment">上加線</li>
+						</ul>
+					</section>
+					<section>
+						<h2>text-shadow</h2>
+						<pre class="fragment"><code data-trim>
+text-shadow: 2px 2px;
+text-shadow: -5px 15px 10px gold;
+						</code></pre>
+						<pre class="fragment"><samp data-trim>
+<span style="text-shadow: 2px 2px;">測試文字</span><br>
+<span style="text-shadow: -5px 15px 10px gold;">測試文字</span>
+						</samp></pre>
+						<ul>
+							<li class="fragment">文字陰影</li>
+							<li class="fragment">陰影水平距離(必須)</li>
+							<li class="fragment">陰影垂直距離(必須)</li>
+							<li class="fragment">模糊範圍</li>
+							<li class="fragment">陰影顏色</li>
+						</ul>
+					</section>
+					<section>
+						<h2>字體</h2>
+						<pre class="fragment"><code data-trim>
+font: italic bold 12px/30px Georgia, serif;
+font-family: Georgia, serif;
+font-style: italic;
+font-size: 2em;
+line-height: 1.5em;
+font-weight: 200;
+						</code></pre>
+					</section>
+					<section>
+						<h2>font-family</h2>
+						<pre class="fragment"><code data-trim>
+font-family: 微軟正黑體;
+font-family: 微軟正黑體 新細明體 標楷體;
+						</code></pre>
+						<ul>
+							<li class="fragment">字型</li>
+							<li class="fragment">可以多個型體排序</li>
+							<li class="fragment">可以載入外部字型</li>
+						</ul>
+					</section>
+					<section>
+						<h2>font-style</h2>
+						<pre class="fragment"><code data-trim>
+font-style: normal;
+font-style: italic;
+font-style: oblique;
+						</code></pre>
+						<ul>
+							<li class="fragment">字體</li>
+							<li class="fragment">一般</li>
+							<li class="fragment">斜體</li>
+							<li class="fragment">斜體</li>
+						</ul>
+					</section>
+					<section>
+						<h2>font-size</h2>
+						<pre class="fragment"><code data-trim>
+font-size: 1.5em;
+						</code></pre>
+						<ul>
+							<li class="fragment">字體大小</li>
+							<li class="fragment">建議用em當單位</li>
+						</ul>
+					</section>
+					<section>
+						<h2>line-height</h2>
+						<pre class="fragment"><code data-trim>
+line-height: 2em;
+						</code></pre>
+						<ul>
+							<li class="fragment">行高</li>
+							<li class="fragment">可以用來實做垂直置中</li>
+						</ul>
+					</section>
+					<section>
+						<h2>font-weight</h2>
+						<pre class="fragment"><code data-trim>
+font-weight: 200;
+font-weight: bold;
+						</code></pre>
+						<ul>
+							<li class="fragment">字重</li>
+							<li class="fragment">數字</li>
+							<li class="fragment">粗體</li>
+						</ul>
+					</section>
+					<section>
+						<h2>font</h2>
+						<pre class="fragment"><code data-trim>
+font: 15px arial, sans-serif;
+font: italic bold 12px/30px Georgia, serif;
+						</code></pre>
+						<ul>
+							<li class="fragment">一行設定所有字體的CSS</li>
+							<li class="fragment">不設定的部分可省略</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Unit of Length</h1>
+					</section>
+					<section>
+						<h2>Unit of Length</h2>
+						<ul>
+							<li class="fragment">px</li>
+							<li class="fragment">cm</li>
+							<li class="fragment">em</li>
+							<li class="fragment">%</li>
+							<li class="fragment">vh, vw</li>
+						</ul>
+					</section>
+					<section>
+						<h2>px, cm</h2>
+						<ul>
+							<li class="fragment">固定單位</li>
+							<li class="fragment">螢幕顯示用px</li>
+							<li class="fragment">輸出列印用cm</li>
+						</ul>
+					</section>
+					<section>
+						<h2>em, %, vh, vw</h2>
+						<ul>
+							<li class="fragment">比例單位</li>
+							<li class="fragment">預設字體大小為1em</li>
+							<li class="fragment">上層尺寸為100%</li>
+							<li class="fragment">視窗高度為100vh</li>
+							<li class="fragment">視窗寬度為100vw</li>
+						</ul>
+					</section>
+					<section>
+						<h2>calc函式</h2>
+						<pre class="fragment"><code data-trim>
+width: calc(100%/2-5px);
+						</code></pre>
+						<ul>
+							<li class="fragment">計算長度</li>
+							<li class="fragment">固定單位和比例單位混用時很好用</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>What's Next?</h1>
+					<ul>
+						<li class="fragment">Inline and Block</li>
+						<li class="fragment">CSS Box Model</li>
+						<li class="fragment">Typesettings</li>
+						<li class="fragment">Position</li>
+						<li class="fragment">Float</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
